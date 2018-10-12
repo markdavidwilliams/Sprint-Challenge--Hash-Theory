@@ -9,8 +9,6 @@ def reconstruct_trip(tickets):
     ht[t[0]] = t[1]
 
   # initialize current location as none
-
-  # initialize current location as none
   current = ht[None]
   # begin building route with current location
   route.append(current)

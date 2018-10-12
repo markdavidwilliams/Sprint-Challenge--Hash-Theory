@@ -9,27 +9,26 @@ def reconstruct_trip(tickets):
     ht[t[0]] = t[1]
 
   # initialize current location as none
-  try:
-    # initialize current location as none
-    current = ht[None]
-    # begin building route with current location
-    route.append(current)
-    # initilize next location
-    next = ht[None]
 
-    # loop until next destination is none
-    while (next != None):
-      try:
-        next = ht[next]
-        if (next):
-          route.append(next)
-      except:
-        return []
+  # initialize current location as none
+  current = ht[None]
+  # begin building route with current location
+  route.append(current)
+  # initilize next location
+  next = ht[None]
 
-    return route
+  # loop until next destination is none
+  while (next != None):
+    try:
+      next = ht[next]
+      if (next):
+        route.append(next)
+    except:
+      return []
+
+  return route
   
-  except:
-    return []
+
 
 
 
